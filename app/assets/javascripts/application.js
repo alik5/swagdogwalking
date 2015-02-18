@@ -15,6 +15,8 @@
 //= require moment
 //= require fullcalendar
 //= require turbolinks
+//= require jquery
+//= require bootstrap-sprockets
 //= require_tree .
 
 
@@ -26,17 +28,35 @@ $(document).ready(function() {
 	    editable: true,
 	    weekMode: 'liquid',
 	    url:'#',
-	    header: {
-        center: 'month,agendaFiveDay' // buttons for switching between views
+	    defaultView: 'agendaDay',
+	    allDaySlot: false, 
+	    aspectRatio: 2, 
+	    businessHours:
+    {
+
+            start: '7:00',
+            end:   '20:00',
+            dow: [ 1, 2, 3, 4, 5]
     },
+	    header: {
+        center: 'month, agendaFiveDay, agendaDay' // buttons for switching between views
+
+    },
+
     views: {
         agendaFiveDay: {
             type: 'agenda',
             duration: { days: 5 },
             buttonText: '5 day'
+        },
+        agendaDay: {
+            type: 'agenda',
+            duration: { days: 1 },
+            buttonText: 'Day'
         }
+        
     }
 
-	})
+ })
 
 });

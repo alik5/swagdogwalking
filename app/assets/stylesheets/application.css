@@ -14,3 +14,17 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+#calendar {
+	font-family: "Raleway";
+	width: 78%;
+	margin-left: 11%;
+}
+
+.fc-widget-content {
+	background-color: whitesmoke; 
+}
+
