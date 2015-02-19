@@ -16,6 +16,8 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "bootstrap/theme";
+
 
 
 #calendar {
@@ -26,5 +28,12 @@
 
 .fc-widget-content {
 	background-color: whitesmoke; 
+}
+
+.welcome {
+	background-color: #D3BECF; 
+	font-family: "Raleway";
+	height: 500px;
+	width: 100%; 
 }
 
