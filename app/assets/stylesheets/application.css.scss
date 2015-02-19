@@ -18,22 +18,79 @@
  @import "bootstrap";
  @import "bootstrap/theme";
 
+body {
+	font-family: "Raleway"; 
+}
 
+h1 {
+	text-align: center; 
+	padding: 20px; 
+	color: #3E454C;
+}
 
 #calendar {
-	font-family: "Raleway";
 	width: 78%;
 	margin-left: 11%;
 }
 
 .fc-widget-content {
-	background-color: whitesmoke; 
+	background-color: #FFF; 
 }
 
 .welcome {
-	background-color: #D3BECF; 
-	font-family: "Raleway";
-	height: 500px;
+	background-color: #FFF; 
+	height: 650px;
 	width: 100%; 
+	margin-top: -20px; 
+}
+
+.calendar {
+	background-color: #FF7F66;
+	height: 750px;
+	width: 100%; 
+	margin-top: -20px; 
+}
+
+.faq {
+	background-color: #FFF; 
+	height: 650px;
+	width: 100%;
+	margin-top: -20px; 
+}
+
+
+
+.btn-group {
+	text-align: center;
+	padding-top: 30px; 
+}
+
+.btn-group .btn {
+
+	font-size: 1.9em; 
+	font-family: "Dosis";
+
+}
+
+.dog {
+	width: 50%;
+}
+
+#small-push {
+	margin-top: 40px; 
+}
+
+#large-push {
+	margin-top: 100px; 
+}
+
+#slog {
+	margin-top: 25px; 
+	font-family: "Dosis";
+}
+
+.title {
+	width: 50%;
+	padding-top: 20px; 
 }
 
