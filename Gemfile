@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'momentjs-rails'
 gem 'fullcalendar-rails'
+gem 'pry'
 
 
 

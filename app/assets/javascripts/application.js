@@ -10,34 +10,37 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery_ujs
 //= require moment
 //= require fullcalendar
 //= require turbolinks
+//= require fullcalendar/gcal
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
 
 
+
+
 $(document).ready(function() { 
+
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
 
 
 
 	$('#calendar').fullCalendar({
+		events: '/events.json',
 	    editable: true,
 	    weekMode: 'liquid',
 	    url:'#',
 	    defaultView: 'agendaDay',
 	    allDaySlot: false, 
 	    aspectRatio: 2, 
-	    businessHours:
-    {
-
-            start: '7:00',
-            end:   '20:00',
-            dow: [ 1, 2, 3, 4, 5]
-    },
 	    header: {
         center: 'month, agendaFiveDay, agendaDay' // buttons for switching between views
 
@@ -55,10 +58,13 @@ $(document).ready(function() {
             buttonText: 'Day'
         }
         
-    }
-
- })
+    },
+     
+        
+	})
 });
+
+
 
 
 
