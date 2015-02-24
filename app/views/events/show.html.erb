@@ -1,44 +1,52 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="row">
+		<div class = "col-md-12">
+			<div class="events">
+				<p id="notice"><%= notice %></p>
 
-<% if @event.booked = "false" %>
+				<% if @event.booked = "false" %>
 
-	<p>Book Now!</p>
-	
+					<h1>Book Now!</h1>
+					
 
-	<%= form_for (@event) do |f| %>
+					<%= form_for (@event) do |f| %>
 
-	<%= f.label "Book" %>
-	<%= f.check_box :booked %>
-	<% end %>
+					<%= f.label "Book" %> : 
+					<%= f.check_box :booked %>
+					<% end %>
 
-	<% else %>
+					<% else %>
 
-	<p>Booked!</p>
+					<h1>Booked!</h1>
 
 
-	<% end %>
-<div id="autoUpdate">
-	<p>
-	  <strong>Title:</strong>
-	  <%= @event.title %>
-	</p>
+					<% end %>
+					<div id="autoUpdate">
+						<p>
+						  <strong>Title:</strong>
+						  <%= @event.title %>
+						</p>
 
-	<p>
-	  <strong>Description:</strong>
-	  <%= @event.description %>
-	</p>
+						<p>
+						  <strong>Description:</strong>
+						  <%= @event.description %>
+						</p>
 
-	<p>
-	  <strong>Start time:</strong>
-	  <%= @event.start_time %>
-	</p>
+						<p>
+						  <strong>Start time:</strong>
+						  <%= @event.start_time.to_formatted_s(format = :short) %>
+						</p>
 
-	<p>
-	  <strong>End time:</strong>
-	  <%= @event.end_time %>
-	</p>
+						<p>
+						  <strong>End time:</strong>
+						  <%= @event.end_time.to_formatted_s(format = :short)  %>
+						</p>
 
+					</div>
+
+				<%= link_to 'Edit', edit_event_path(@event) %> |
+				<%= link_to 'Back', events_path %>
+			</div>
+		<div>
+	</div>
 </div>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>

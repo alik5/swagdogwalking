@@ -17,6 +17,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'momentjs-rails'
 gem 'fullcalendar-rails'
 gem 'pry'
+gem 'devise'
+gem 'omniauth-facebook'
 
 
 
