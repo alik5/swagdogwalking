@@ -46,10 +46,19 @@
 
 					<div id="signUp">
 
+					<% if model_signed_in? %>
+                      <%= Thanks @model.first_name %>
+                      <% else %>
+                                    
+
 					<%= link_to "Sign in with Facebook", model_omniauth_authorize_path(:facebook) %> 
 					Or
-					<%= link_to "Sign Up", new_model_session_path %>
+					<%= link_to "Sign Up", new_model_registration_path %>
+					or 
+					<%= link_to "Sign In", new_model_session_path %>
 					</div>
+
+					<% end %>
 
 				<%= link_to 'Edit', edit_event_path(@event) %> |
 				<%= link_to 'Back', events_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224180350) do
+ActiveRecord::Schema.define(version: 20150224190056) do
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20150224180350) do
     t.datetime "updated_at"
     t.string   "provider"
     t.string   "uid"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "models", ["email"], name: "index_models_on_email", unique: true
