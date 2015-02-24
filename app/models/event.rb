@@ -1,4 +1,4 @@
 class Event < ActiveRecord::Base
 
-before_action :authenticate_model!
+ belongs_to :model
 end

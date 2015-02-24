@@ -44,6 +44,13 @@
 
 					</div>
 
+					<div id="signUp">
+
+					<%= link_to "Sign in with Facebook", model_omniauth_authorize_path(:facebook) %> 
+					Or
+					<%= link_to "Sign Up", new_model_session_path %>
+					</div>
+
 				<%= link_to 'Edit', edit_event_path(@event) %> |
 				<%= link_to 'Back', events_path %>
 			</div>
