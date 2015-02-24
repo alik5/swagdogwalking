@@ -12,13 +12,13 @@
 //
 
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require moment
 //= require fullcalendar
-//= require turbolinks
 //= require fullcalendar/gcal
-//= require jquery
 //= require bootstrap-sprockets
+//= require turbolinks
 //= require_tree .
 
 
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 	$('#calendar').fullCalendar({
 		events: '/events.json',
-	    editable: true,
+	    editable: false,
 	    weekMode: 'liquid',
 	    url:'#',
 	    defaultView: 'agendaFiveDay',

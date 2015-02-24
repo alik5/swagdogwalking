@@ -32,7 +32,7 @@ class ModelController < ApplicationController
 
 
 	def model_params
-		params.require(:model).permit(:first_name, :last_name, :email)
+		params.require(:model).permit(:first_name, :last_name, :email, events_attributes: [:booked, :title])
 	end
 
 end

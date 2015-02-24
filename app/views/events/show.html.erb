@@ -2,26 +2,54 @@
 	<div class="row">
 		<div class = "col-md-12">
 			<div class="events">
-				<p id="notice"><%= notice %></p>
+				
 
 				<% if @event.booked = "false" %>
 
-					<h1>Book Now!</h1>
+
+
+					<% if model_signed_in? %>
+                      Welcome, <%= current_model.name %>!
+
+                      <%= form_for (@event) do |f| %>
+
+						<%= f.label "Book" %> : 
+						<%= f.check_box :booked %>
+
+
+						<div id="confirmation">
+						<h1>Booked!</h1>
+						<%= f.submit  %>
+						<% end %>
+						</div>
+
+				
+                      
+                      <% else %>
+
+                    <div id="signUp">
+                     
+                    <h1>Sign Up or Log In to Book Now!</h1>               
+
+					<%= link_to "Sign in with Facebook", model_omniauth_authorize_path(:facebook) %> 
+					Or
+					<%= link_to "Sign Up", new_model_registration_path %>
+					or 
+					<%= link_to "Sign In", new_model_session_path %>
+					</div>
+
+					<% end %>
 					
 
-					<%= form_for (@event) do |f| %>
+					
 
-					<%= f.label "Book" %> : 
-					<%= f.check_box :booked %>
-					<% end %>
-
-					<% else %>
-
-					<h1>Booked!</h1>
+					
 
 
 					<% end %>
 					<div id="autoUpdate">
+
+					
 						<p>
 						  <strong>Title:</strong>
 						  <%= @event.title %>
@@ -44,22 +72,7 @@
 
 					</div>
 
-					<div id="signUp">
-
-
-					<% if model_signed_in? %>
-                      Thanks <%= current_model.name %>
-                      <% else %>
-                                    
-
-					<%= link_to "Sign in with Facebook", model_omniauth_authorize_path(:facebook) %> 
-					Or
-					<%= link_to "Sign Up", new_model_registration_path %>
-					or 
-					<%= link_to "Sign In", new_model_session_path %>
-					</div>
-
-					<% end %>
+				
 
 				<%= link_to 'Edit', edit_event_path(@event) %> |
 				<%= link_to 'Back', events_path %>

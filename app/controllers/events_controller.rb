@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  respond_to :json
 
   # GET /events
   # GET /events.json
@@ -43,9 +44,9 @@ class EventsController < ApplicationController
    
     respond_to do |format|
       if @event.update(event_params)
-         @event = current_model.events.build(params[:event])
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Event was successfully updated.' }
         format.json { render :show, status: :ok, location: @event }
+
       else
         format.html { render :edit }
         format.json { render json: @event.errors, status: :unprocessable_entity }
@@ -71,6 +72,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :booked, :description, :start_time, :end_time, model_attributes => [ :id, :first_name, :last_name])
+      params.require(:event).permit(:title, :booked, :description, :start_time, :end_time, models_attributes: [:id, :uid, :email])
     end
 end

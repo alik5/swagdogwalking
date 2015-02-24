@@ -2,9 +2,9 @@
 $(document).ready(function(){
     $('#event_booked').change(function(){
         if(this.checked)
-            $('#autoUpdate').hide() && $('#signUp').fadeIn('slow');
+            $('#autoUpdate').hide() && $('#confirmation').fadeIn('slow');
         else
-            $('#autoUpdate').fadeIn('slow');
+            $('#autoUpdate').fadeIn('slow') && $('#signUp').fadeOut('slow') && $('#confirmation').fadeOut('slow');
 
     });
 
