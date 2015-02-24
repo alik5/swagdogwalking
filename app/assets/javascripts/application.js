@@ -38,7 +38,7 @@ $(document).ready(function() {
 	    editable: true,
 	    weekMode: 'liquid',
 	    url:'#',
-	    defaultView: 'agendaDay',
+	    defaultView: 'agendaFiveDay',
 	    allDaySlot: false, 
 	    aspectRatio: 2, 
 	    header: {

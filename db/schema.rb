@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220180504) do
+ActiveRecord::Schema.define(version: 20150224171031) do
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150220180504) do
     t.datetime "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "booked"
   end
 
 end
