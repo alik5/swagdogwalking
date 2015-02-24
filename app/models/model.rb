@@ -6,6 +6,10 @@ class Model < ActiveRecord::Base
 
    has_many :events
 
+   def name
+    "#{self.first_name}"
+   end
+
    def self.from_omniauth(auth)
   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
     model.email = auth.info.email

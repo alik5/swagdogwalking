@@ -46,8 +46,9 @@
 
 					<div id="signUp">
 
+
 					<% if model_signed_in? %>
-                      <%= Thanks @model.first_name %>
+                      Thanks <%= current_model.name %>
                       <% else %>
                                     
 

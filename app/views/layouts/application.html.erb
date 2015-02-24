@@ -41,6 +41,12 @@
 	        </li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
+	      	<% if model_signed_in? %>
+	      	<li><%= current_model.first_name %></li>
+            <li><%= link_to "SIGN OUT", destroy_model_session_path, :method => :delete %></li>
+             <% else %>
+             <li><%= link_to "SIGN UP", new_model_registration_path  %></li>
+             <% end %>
 	        <li><a href="#">PHOTOS</a></li>
 	        <li><a href="#">BLOG</a></li>
 	       
