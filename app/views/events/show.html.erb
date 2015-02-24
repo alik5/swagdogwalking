@@ -1,24 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<% if @event.booked = "false" %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+	<p>Book Now!</p>
+	
 
-<p>
-  <strong>Start time:</strong>
-  <%= @event.start_time %>
-</p>
+	<%= form_for (@event) do |f| %>
 
-<p>
-  <strong>End time:</strong>
-  <%= @event.end_time %>
-</p>
+	<%= f.label "Book" %>
+	<%= f.check_box :booked %>
+	<% end %>
+
+	<% else %>
+
+	<p>Booked!</p>
+
+
+	<% end %>
+<div id="autoUpdate">
+	<p>
+	  <strong>Title:</strong>
+	  <%= @event.title %>
+	</p>
+
+	<p>
+	  <strong>Description:</strong>
+	  <%= @event.description %>
+	</p>
+
+	<p>
+	  <strong>Start time:</strong>
+	  <%= @event.start_time %>
+	</p>
+
+	<p>
+	  <strong>End time:</strong>
+	  <%= @event.end_time %>
+	</p>
+
+</div>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
