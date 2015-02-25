@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
  
   resources :events
-  resources "contacts", only: [:new, :create, :thanks]
+
 
   get 'welcome/index'
 
