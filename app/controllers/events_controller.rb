@@ -54,6 +54,12 @@ class EventsController < ApplicationController
     end
   end
 
+  def reserve
+  @event = Event.find(params[:id])
+  current_model.events << @event
+  redirect_to root_path
+  end
+
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy

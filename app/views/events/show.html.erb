@@ -15,13 +15,16 @@
 
 						<%= f.label "Book" %> : 
 						<%= f.check_box :booked %>
-
+						<% end %>
 
 						<div id="confirmation">
+						
 						<h1>Booked!</h1>
-						<%= f.submit  %>
-						<% end %>
+						<%= button_to 'Save', reserve_event_path(@event.id), :method => :post %> 
+						
 						</div>
+
+
 
 				
                       

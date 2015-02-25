@@ -10,6 +10,10 @@ class Model < ActiveRecord::Base
     "#{self.first_name}"
    end
 
+   def reserve!(id)
+   current_user.events << event.find_by_id(id)
+   end
+
    def self.from_omniauth(auth)
   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
     model.email = auth.info.email
