@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  get 'getstarted', to: 'welcome#getstarted', as: :getstarted
+  get 'getstarted', to: "welcome#getstarted"
+
+
 
 
   devise_for :models, :controllers => { :omniauth_callbacks => "models/omniauth_callbacks" }
