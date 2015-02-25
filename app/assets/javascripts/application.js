@@ -41,6 +41,7 @@ $(document).ready(function() {
 	    defaultView: 'agendaFiveDay',
 	    allDaySlot: false, 
 	    aspectRatio: 2, 
+	    eventColor: '#7ECEFD',
 	    header: {
         center: 'month, agendaFiveDay, agendaDay' // buttons for switching between views
 
@@ -62,6 +63,7 @@ $(document).ready(function() {
      
         
 	})
+
 });
 
 
