@@ -6,6 +6,11 @@ class WelcomeController < ApplicationController
   end
 
   def getstarted
+   respond_to do |format|
+      format.html
+      format.pdf do
+      render :pdf => "assets/images/dog_form.pdf"
+   end
   end
-  
+ end
 end

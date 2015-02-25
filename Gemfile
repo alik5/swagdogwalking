@@ -24,6 +24,8 @@ gem 'omniauth-facebook'
 gem 'mail_form'
 gem 'simple_form'
 gem 'mandrill-rails'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
