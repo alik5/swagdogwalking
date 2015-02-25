@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
   end
 
   def getstarted
-      render :pdf => "assets/images/swag_dog_walking_form.pdf"
+      
    end
   
 
