@@ -40,13 +40,12 @@ $(document).ready(function() {
 	    url:'#',
 	    defaultView: 'agendaFiveDay',
 	    allDaySlot: false, 
-	    aspectRatio: 2, 
+	    aspectRatio: 2,
 	    eventColor: '#7ECEFD',
 	    header: {
         center: 'month, agendaFiveDay, agendaDay' // buttons for switching between views
 
     },
-
     views: {
         agendaFiveDay: {
             type: 'agenda',

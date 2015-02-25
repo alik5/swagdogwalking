@@ -2,9 +2,18 @@
 	<div class="row">
 		<div class = "col-md-12">
 			<div class="events">
-				
 
-				<% if @event.booked = "false" %>
+						<%if @event.booked? %>
+
+
+						This Event has been booked!
+
+						
+
+
+						<% else %>
+				
+					
 
 
 
@@ -14,14 +23,14 @@
                       <%= form_for (@event) do |f| %>
 
 						<%= f.label "Book" %> : 
-						<%= f.check_box :booked %>
-						<% end %>
+						<%= f.check_box :booked, {}, "true", "false" %>
+						
 
 						<div id="confirmation">
 						
 						<h1>Booked!</h1>
 						<%= button_to 'Save', reserve_event_path(@event.id), :method => :post, :id => "evt-btn" %> 
-						
+						<% end %>
 						</div>
 
 
@@ -49,7 +58,7 @@
 					
 
 
-					<% end %>
+					
 					<div id="autoUpdate">
 
 					
@@ -77,8 +86,10 @@
 
 				
 
-				<%= link_to 'Edit', edit_event_path(@event) %> |
-				<%= link_to 'Back', events_path %>
+				
+				<%= link_to 'Back', root_path %>
+					<% end %>
+				
 			</div>
 		<div>
 	</div>

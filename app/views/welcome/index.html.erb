@@ -46,15 +46,7 @@
 		<h1>FAQ</h1>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 faq">
-		
-				
-
-				<h4>Where do you walk?<h4>
-				<h4>Are You Insured<h4>
-				<h4>What about licensed?<h4>
-				<h4>How many dogs do you walk at one time?<h4>
-				</div>
+				<%= render 'faq' %>
 			</div>
 		</div>
 
@@ -62,9 +54,7 @@
 			<h1>Services and Rates</h1>
 				<div class="container">
 					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							
-						</div>
+						<%= render 'servicesrates' %>
 					</div>
 				</div>
 			</div>
@@ -73,7 +63,13 @@
 			<h1>Photos</h1>
 				<div class="container">
 					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
+						<div class="col-md-4 col-md-offset-2">
+
+							<%= image_tag "pierre.jpg", :class => 'pierre' %>
+						</div>
+						<div class="col-md-4">
+							<%= image_tag "snowface.jpg", :class=> 'snowface' %>
+						</div>
 							
 						</div>
 					</div>
