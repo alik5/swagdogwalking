@@ -20,8 +20,8 @@ gem 'fullcalendar-rails'
 gem 'pry'
 gem 'devise'
 gem 'omniauth-facebook'
-
-
+gem 'mail_form'
+gem 'simple_form'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
