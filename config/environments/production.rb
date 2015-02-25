@@ -6,22 +6,8 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { :host => 'www.swagdogwalking.com' }
 
-  Rails.application.routes.default_url_options[:host] = 'www.swagdogwalking.com'
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default :charset => "utf-8"
 
-  config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrillapp.com",
-    :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
-    :enable_starttls_auto => true, # detects and uses STARTTLS
-    :user_name => "app32189780@heroku.com",
-    :password  => "wiRYg_LdBNW6dzaEXDWp_w", # SMTP password is any valid API key
-    :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'www.ghostwrite.io', # your domain to identify your server when connecting
-  }
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
