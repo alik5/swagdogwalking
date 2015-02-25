@@ -17,3 +17,4 @@
 
 /config/initializers/constants.rb
 /config/initializers/devise.rb
+/config/environments/production.rb

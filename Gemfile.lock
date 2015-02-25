@@ -77,6 +77,8 @@ GEM
     mail_form (1.5.0)
       actionmailer (>= 3.2, < 5)
       activemodel (>= 3.2, < 5)
+    mandrill-rails (1.0.2)
+      activesupport (>= 3.0.3)
     method_source (0.8.2)
     mime-types (2.4.3)
     minitest (5.5.1)
@@ -178,6 +180,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   mail_form
+  mandrill-rails
   momentjs-rails
   omniauth-facebook
   pg

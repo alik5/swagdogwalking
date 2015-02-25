@@ -23,6 +23,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'mail_form'
 gem 'simple_form'
+gem 'mandrill-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

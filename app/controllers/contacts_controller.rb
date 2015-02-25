@@ -5,14 +5,13 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(params[:contact])
+    CustomMailer.mail_letter(@contact).deliver
     @contact.request = request
     if @contact.deliver
-      redirect_to root_path
       flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
     else
-      redirect_to root_path
       flash.now[:error] = 'Cannot send message.'
-      
+      render :new
     end
   end
 end

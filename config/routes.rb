@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'welcome#index'
+
   resources :events do
     member do
       post :reserve
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
   end
  
   resources :events
-  resources "contacts", only: [:new, :create]
+  resources "contacts", only: [:new, :create, :thanks]
 
   get 'welcome/index'
 
@@ -23,7 +25,7 @@ end
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+ 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
