@@ -17,6 +17,8 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "bootstrap/theme";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
 body {
 	font-family: "Raleway"; 
@@ -26,6 +28,10 @@ h1 {
 	text-align: center; 
 	padding: 20px; 
 	color: #3E454C;
+}
+
+ul {
+	list-style: none; 
 }
 
 #calendar {
@@ -108,6 +114,7 @@ h1 {
 .snowface {
 	width: 100%; 
 }
+
 
 
 

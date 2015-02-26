@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="events">
 	<div class="row">
 		<div class = "col-md-12">
 			<div class="events">
@@ -41,13 +41,19 @@
 
                     <div id="signUp">
                      
-                    <h1>Sign Up or Log In to Book Now!</h1>               
+                    <h1>SIGN UP TO BOOK NOW!</h1>  
+                    <ul class= "signUp">             
 
-					<%= link_to "Sign in with Facebook", model_omniauth_authorize_path(:facebook) %> 
-					Or
-					<%= link_to "Sign Up", new_model_registration_path %>
-					or 
-					<%= link_to "Sign In", new_model_session_path %>
+					<li><%= link_to "SIGN IN WITH FACEBOOK", model_omniauth_authorize_path(:facebook) %> 
+					<%= icon('facebook') %> <br /></li>
+					OR
+					<li><%= link_to "SIGN UP", new_model_registration_path %>
+					<%= icon('thumbs-up') %> <br /></li>
+					OR 
+					<li><%= link_to "SIGN IN", new_model_session_path %>
+					<%= icon('unlock') %> <br /></li>
+
+					</ul>
 					</div>
 
 					<% end %>

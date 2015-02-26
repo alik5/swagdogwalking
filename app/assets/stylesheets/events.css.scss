@@ -2,8 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#events {
+	background-color: #FF7F66;
+	height: 750px;
+	width: 100%; 
+	margin-top: -20px;
+}
 .events {
-	font-size: 1.5em; 
+	font-size: 1.5em; 	
+}
+
+.events h1 {
+	color: #FFF;
 }
 
 #signUp {
@@ -13,3 +23,18 @@
 #confirmation {
 		display: none; 
 	}
+
+
+.signUp {
+	text-align: center; 
+}
+
+.signUp li {
+	font-size: 1.2em; 
+	padding: 15px; 
+}
+
+.signUp a:hover {
+	color: #FFF;
+	background-color: #FF7F66;
+}
