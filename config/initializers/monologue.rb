@@ -3,7 +3,7 @@ Monologue.config do |config|
   config.site_subtitle = "Dog Walking in Somerville, MA!"
   config.site_url = "www.swagdogwalking.com/blog"
 
-  config.meta_description = "Dog walking adventures in Somerville && Cambridge..."
+  config.meta_description = "Dog walking adventures in Somerville && Cambridge, Massachusetts..."
   config.meta_keyword = "dog walking, pet care, somerville dog walking, cambridge dog walking"
 
   config.admin_force_ssl = false
@@ -26,12 +26,6 @@ Monologue.config do |config|
 
 
   #SOCIAL
-  config.twitter_username = "myhandle"
-  config.facebook_url = "https://www.facebook.com/myhandle"
-  config.facebook_logo = 'logo.png'
-  config.google_plus_account_url = "https://plus.google.com/u/1/.../posts"
-  config.linkedin_url = "http://www.linkedin.com/in/myhandle"
-  config.github_username = "myhandle"
-  config.show_rss_icon = true
+
 
 end

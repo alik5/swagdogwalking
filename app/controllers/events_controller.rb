@@ -57,7 +57,21 @@ class EventsController < ApplicationController
   def reserve
   @event = Event.find(params[:id])
   current_model.events << @event
+
+   respond_to do |format|
+      if @event.update(event_params)
+        format.html { redirect_to root_path, notice: 'Event was successfully updated.' }
+        format.json { render :show, status: :ok, location: @event }
+
+      else
+        format.html { render :edit }
+        format.json { render json: @event.errors, status: :unprocessable_entity }
+      end
+    end
+  flash.keep[:notice]="Event was updated"
   redirect_to root_path
+  UserMailer.alert_email.deliver_now
+
   end
 
   # DELETE /events/1
