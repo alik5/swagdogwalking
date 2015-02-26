@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'getstarted', to: "welcome#getstarted"
 
-
+  mount Monologue::Engine, at: '/blog' # or whatever path, be it "/blog" or "/monologue"
 
 
   devise_for :models, :controllers => { :omniauth_callbacks => "models/omniauth_callbacks" }

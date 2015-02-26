@@ -27,6 +27,7 @@ gem 'mandrill-rails'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'font-awesome-sass', '~> 4.3.0'
+gem 'monologue'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
