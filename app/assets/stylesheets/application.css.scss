@@ -91,7 +91,22 @@ ul {
 }
 
 #slog-lower {
-	padding: 20px 0 40px 0;   
+	padding: 20px 0 40px 0; 
+	letter-spacing: 2px;   
+}
+
+.left-span-link {
+	color: #FF7F66;
+}
+
+.left-span-link:hover {
+	background-color: #FFF;
+	color: #000;
+}
+
+.right-span-link a:hover {
+	background-color: #FFF; 
+	color: #FF7F66;
 }
 
 .title {
