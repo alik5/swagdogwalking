@@ -5,25 +5,49 @@
 	background-color: #3E454C;
 	margin-top: 25px; 
 	color: #FFF; 
+	font-family: "Dosis";
 }
 
 .rates h1 {
-	color: #FFF; 
+	color: #FF7F66; 
+	letter-spacing: 4px;
+
+}
+
+.rates h2 {
+	font-size: 2em; 
+	letter-spacing: 3px; 
+}
+
+.rates h3 {
+	color: #FF7F66;
+}
+
+.rates span {
+	color: #FF7F66;
+	font-size: 1.2em; 
+
 }
 
 
 .rates ul {
 	list-style: none; 
+	margin-bottom: 50px; 
+	
 
 }
 
+.rates p {
+	font-size: 1.5em;
+}
+
 .left-services a {
-	color: #FFF;
+	color: #FF7F66;
 	text-decoration: underline; 
 }
 
 .left-services a:hover {
-	color: #FF7F66;
+	color: #FFF;
 	background-color: #3E454C
 }
 

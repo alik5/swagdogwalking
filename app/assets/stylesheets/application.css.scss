@@ -45,14 +45,14 @@ ul {
 
 .welcome {
 	background-color: #FFF; 
-	height: 650px;
+	height: 700px;
 	width: 100%; 
 	margin-top: -20px; 
 }
 
 .calendar {
 	background-color: #FF7F66;
-	height: 750px;
+	height: 600px;
 	width: 100%; 
 	margin-top: -20px; 
 }
@@ -84,10 +84,14 @@ ul {
 	margin-top: 100px; 
 }
 
-#slog {
+.slog {
 	margin-top: 25px; 
 	font-family: "Dosis";
 	color: #FF7F66; 
+}
+
+#slog-lower {
+	padding: 20px 0 40px 0;   
 }
 
 .title {
